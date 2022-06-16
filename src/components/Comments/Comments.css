@@ -1,0 +1,23 @@
+.Comments {
+  text-align: center;
+}
+
+.Comments-header {
+  background-color: #033076;
+  min-height: 70px;
+  padding: 20px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.Comments-title {
+  font-size: 2em;
+}
+
+.Comments-intro {
+  font-size: large;
+}
+
+h4 {
+  font-style: italic;
+}

@@ -1,0 +1,23 @@
+.Feeling {
+  text-align: center;
+}
+
+.Feeling-header {
+  background-color: #033076;
+  min-height: 70px;
+  padding: 20px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.Feeling-title {
+  font-size: 2em;
+}
+
+.Feeling-intro {
+  font-size: large;
+}
+
+h4 {
+  font-style: italic;
+}

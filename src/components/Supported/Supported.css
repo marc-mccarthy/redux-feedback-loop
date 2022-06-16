@@ -1,0 +1,23 @@
+.Supported {
+  text-align: center;
+}
+
+.Supported-header {
+  background-color: #033076;
+  min-height: 70px;
+  padding: 20px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.Supported-title {
+  font-size: 2em;
+}
+
+.Supported-intro {
+  font-size: large;
+}
+
+h4 {
+  font-style: italic;
+}

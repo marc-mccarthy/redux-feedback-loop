@@ -4,16 +4,16 @@ For this assignment, you will be creating a reflection/feedback form modeled aft
 
 ### SETUP
 
-Create your database and tables using the provided `data.sql` file. Start the server.
+[x] Create your database and tables using the provided `data.sql` file. Start the server.
 
-```
+```javascript
 npm install
 npm run server
 ```
 
 Now that the server is running, open a new terminal tab with `cmd + t` and start the react client app.
 
-```
+```javascript
 npm run client
 ```
 
