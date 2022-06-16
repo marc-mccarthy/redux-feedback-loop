@@ -4,7 +4,7 @@ import './index.css';
 import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 import {createStore, combineReducers} from 'redux';
-import {Providers} from 'react-redux';
+import {Provider} from 'react-redux';
 
 const feelingRed = (state = '', action) => {
   if (action.type === 'SAVE_FEELING') {

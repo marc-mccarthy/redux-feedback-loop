@@ -30,11 +30,14 @@ function Home() {
 
   return (
     <div className='Home'>
-      <h2>Shall we get started?</h2>
-      <div>
-        <button onClick={begin}>Start</button>
-        <button onClick={begin}>Nope</button>
-      </div>
+      <header className='Home-header'>
+        <h1 className='Home-title'>Home</h1>
+        <h2>Shall we get started?</h2>
+        <div>
+          <button onClick={begin}>Red Pill</button>
+          <button onClick={begin}>Blue Pill</button>
+        </div>
+      </header>
     </div>
   );
 }
