@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import {Route, HashRouter as Router} from 'react-router-dom';
+import NavBar from '../NavBar/NavBar';
 import Home from '../Home/Home';
 import Feelings from '../Feelings/Feelings';
 import Understanding from '../Understanding/Understanding';
@@ -14,6 +15,7 @@ function App() {
         <div className='App'>
             <header className='App-header'>
                 <h1 className='App-title'>Feedback!</h1>
+                <NavBar/>
             </header>
             <Router>
                 <Route path="/" exact>

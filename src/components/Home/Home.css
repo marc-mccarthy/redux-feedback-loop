@@ -1,13 +1,10 @@
 .Home {
     text-align: center;
+    color: white;
 }
 
 .Home-header {
-    background-color: green;
-    min-height: 70px;
-    padding: 20px;
-    color: white;
-    margin-bottom: 20px;
+    min-height: 50px;
 }
 
 .Home-title {
@@ -27,6 +24,13 @@ img {
     width: 50px;
 }
 
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
 button {
     border-radius: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
 }

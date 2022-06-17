@@ -8,14 +8,14 @@ function Understanding() {
     const dispatch = useDispatch();
     const history = useHistory();
 
-    const [feelNum, setFeelNum] = useState(0);
+    const [feelNum, setFeelNum] = useState('');
 
     const change = (event) => {
         setFeelNum(event.target.value);
     }
 
     const check = () => {
-        if (feelNum >= 0 && feelNum < 6) {
+        if (feelNum >= 0 && feelNum <= 5 && feelNum !== '') {
             submit();
             setFeelNum('');
         } else {

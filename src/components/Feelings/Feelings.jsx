@@ -3,21 +3,20 @@ import './Feelings.css';
 import Swal from 'sweetalert2';
 import {useDispatch} from 'react-redux';
 import {useHistory} from 'react-router-dom';
-import {useSelector} from 'react-redux';
 
 function Feelings() {
     const dispatch = useDispatch();
     const history = useHistory();
-    const test = useSelector(store => store.feelingsReducer)
 
-    const [feelNum, setFeelNum] = useState(0);
+    const [feelNum, setFeelNum] = useState('');
 
     const change = (event) => {
         setFeelNum(event.target.value);
     }
 
     const check = () => {
-        if (feelNum >= 0 && feelNum < 6) {
+        console.log(feelNum)
+        if (feelNum >= 0 && feelNum <= 5 && feelNum !== '') {
             submit();
             setFeelNum('');
         } else {
@@ -45,7 +44,6 @@ function Feelings() {
         <div className='Feelings'>
             <header className='Feelings-header'>
                 <h1 className='Feelings-title'>Feeling</h1>
-                <h2>Test: {test}</h2>
                 <h2>How are you feeling today?</h2>
                 <div>
                     <input onChange={change} value={feelNum} type="number" placeholder="i.e. #1-5"/>

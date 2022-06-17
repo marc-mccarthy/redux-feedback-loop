@@ -2,8 +2,8 @@ import React from 'react';
 import {useHistory} from 'react-router-dom';
 import './Home.css';
 import Swal from 'sweetalert2';
-import redPill from './images/red-pill.ico';
-import bluePill from './images/blue-pill.ico';
+import redPill from '../../images/red-pill.ico';
+import bluePill from '../../images/blue-pill.ico';
 
 function Home() {
     const history = useHistory();
@@ -45,12 +45,14 @@ function Home() {
         <div className='Home'>
             <header className='Home-header'>
                 <h1 className='Home-title'>Home</h1>
+            </header>
+            <div>
                 <h2>Shall we get started?</h2>
-                <div>
+                <div className='flex-container'>
                     <button onClick={ready}><img src={redPill} alt="Red Pill"/></button>
                     <button onClick={notReady}><img src={bluePill} alt="Blue Pill"/></button>
                 </div>
-            </header>
+            </div> 
         </div>
     );
 }
