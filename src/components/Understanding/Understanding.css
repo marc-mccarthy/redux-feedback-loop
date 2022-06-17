@@ -1,23 +1,23 @@
 .Understanding {
-  text-align: center;
+    text-align: center;
 }
 
 .Understanding-header {
-  background-color: purple;
-  min-height: 70px;
-  padding: 20px;
-  color: white;
-  margin-bottom: 20px;
+    background-color: purple;
+    min-height: 70px;
+    padding: 20px;
+    color: white;
+    margin-bottom: 20px;
 }
 
 .Understanding-title {
-  font-size: 2em;
+    font-size: 2em;
 }
 
 .Understanding-intro {
-  font-size: large;
+    font-size: large;
 }
 
 h4 {
-  font-style: italic;
+    font-style: italic;
 }

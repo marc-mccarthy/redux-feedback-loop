@@ -1,20 +1,20 @@
-.Comments {
+.Success {
     text-align: center;
 }
 
-.Comments-header {
-    background-color: black;
+.Success-header {
+    background-color: red;
     min-height: 70px;
     padding: 20px;
     color: white;
     margin-bottom: 20px;
 }
 
-.Comments-title {
+.Success-title {
     font-size: 2em;
 }
 
-.Comments-intro {
+.Success-intro {
     font-size: large;
 }
 

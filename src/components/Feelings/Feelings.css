@@ -1,20 +1,20 @@
-.Comments {
+.Feelings {
     text-align: center;
 }
 
-.Comments-header {
-    background-color: black;
+.Feelings-header {
+    background-color: orange;
     min-height: 70px;
     padding: 20px;
-    color: white;
+    color: black;
     margin-bottom: 20px;
 }
 
-.Comments-title {
+.Feelings-title {
     font-size: 2em;
 }
 
-.Comments-intro {
+.Feelings-intro {
     font-size: large;
 }
 

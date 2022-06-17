@@ -1,45 +1,68 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
-import './Home.css';
+import './Review.css';
 import Swal from 'sweetalert2';
+import {useSelector} from 'react-redux';
 
-function Home() {
-  const history = useHistory();
-  const [status, setStatus] = useState('');
+function Review() {
+    const history = useHistory();
+    const feelings = useSelector(store => store.feelingsReducer);
+    const understanding = useSelector(store => store.understandingReducer);
+    const supported = useSelector(store => store.supportedReducer);
+    const comments = useSelector(store => store.commentsReducer);
 
-  const begin = () => {
-    Swal.fire({
-      title: 'Warning',
-      icon: 'warning',
-      text: 'Are you sure?',
-      showDenyButton: true,
-      confirmButtonText: 'Yes',
-      denyButtonText: 'No'
-    }).then(result => {
-      if (result.isDenied) {
-        return false;
-      } 
-      if (result.isConfirmed) {
-        history.push('/feeling');
-      }
-    }).catch(error => {
-      console.log(error);
-    })
-  }
+    const check = () => {
+        Swal.fire({
+            title: 'Warning',
+            icon: 'warning',
+            text: 'Are you sure',
+            showDenyButton: true,
+            confirmButtonText: 'Yes',
+            denyButtonText: 'No'
+        }).then(result => {
+            if (result.isDenied) {
+                return false;
+            }
+            if (result.isConfirmed) {
+                submit();
+                history.push('/success');
+            }
+        }).catch(error => {
+            console.log(error);
+        })
+    }
 
-  return (
-    <div className='Home'>
-      <header className='Home-header'>
-        <h1 className='Home-title'>Home</h1>
-        <h2>Shall we get started?</h2>
-        <div>
-          <button onClick={begin}>Red Pill</button>
-          <button onClick={begin}>Blue Pill</button>
+    const submit = () => {
+        axios.post('/feedback', {
+            feelings: feelings,
+            understanding: understanding,
+            supported: supported,
+            comments: comments
+        }).then(response => {
+            console.log(response);
+        }).catch(error => {
+            console.log(error);
+        })
+    }
+
+    return (
+        <div className='Review'>
+            <header className='Review-header'>
+                <h1 className='Review-title'>Review</h1>
+                <h2>Review Your Feedback</h2>
+                <div>
+                    <h3>Feelings: {feelings}</h3>
+                    <h3>Understanding: {understanding}</h3>
+                    <h3>Support: {supported}</h3>
+                    <h3>Comments: {comments}</h3>
+                </div>
+                <div>
+                    <button onClick = {check}>Submit</button>
+                </div>
+            </header>
         </div>
-      </header>
-    </div>
-  );
+    );
 }
 
-export default Home;
+export default Review;

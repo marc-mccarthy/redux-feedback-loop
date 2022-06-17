@@ -1,23 +1,23 @@
 .Supported {
-  text-align: center;
+    text-align: center;
 }
 
 .Supported-header {
-  background-color: yellow;
-  min-height: 70px;
-  padding: 20px;
-  color: black;
-  margin-bottom: 20px;
+    background-color: yellow;
+    min-height: 70px;
+    padding: 20px;
+    color: black;
+    margin-bottom: 20px;
 }
 
 .Supported-title {
-  font-size: 2em;
+    font-size: 2em;
 }
 
 .Supported-intro {
-  font-size: large;
+    font-size: large;
 }
 
 h4 {
-  font-style: italic;
+    font-style: italic;
 }
