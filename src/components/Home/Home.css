@@ -28,9 +28,3 @@ img {
     display: flex;
     justify-content: center;
 }
-
-button {
-    border-radius: 15px;
-    margin-left: 10px;
-    margin-right: 10px;
-}

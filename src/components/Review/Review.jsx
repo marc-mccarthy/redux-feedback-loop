@@ -13,6 +13,23 @@ function Review() {
     const comments = useSelector(store => store.commentsReducer);
 
     const check = () => {
+        if (feelings === '' || understanding === '' || supported === '') {
+            Swal.fire({
+                title: 'Invalid Inputs',
+                icon: 'error',
+                text: 'Missing inputs somewhere',
+                confirmButtonText: 'Ok',
+            }).then(result => {
+                if (result.isConfirmed) {
+                    return false
+                }
+            }).catch(error => {
+                console.log(error);
+            })
+        }
+    }
+
+    const alert = () => {
         Swal.fire({
             title: 'Warning',
             icon: 'warning',
@@ -58,7 +75,7 @@ function Review() {
                     <h3>Comments: {comments}</h3>
                 </div>
                 <div>
-                    <button onClick = {check}>Submit</button>
+                    <button onClick={check}>Submit</button>
                 </div>
             </header>
         </div>

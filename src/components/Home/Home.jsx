@@ -1,12 +1,16 @@
-import React from 'react';
+// import React from 'react';
+import * as React from 'react';
+import {useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import './Home.css';
 import Swal from 'sweetalert2';
-import redPill from '../../images/red-pill.ico';
-import bluePill from '../../images/blue-pill.ico';
+import {Stack, Snackbar} from '@mui/material';
+import {Button} from '@mui/material';
+
 
 function Home() {
     const history = useHistory();
+    const [open, setOpen] = useState(false);
 
     const ready = () => {
         Swal.fire({
@@ -20,6 +24,7 @@ function Home() {
             if (result.isDenied) {
                 return false;
             } else if (result.isConfirmed) {
+                setOpen(true);
                 history.push('/feelings');
             }
         }).catch(error => {
@@ -49,10 +54,17 @@ function Home() {
             <div>
                 <h2>Shall we get started?</h2>
                 <div className='flex-container'>
-                    <button onClick={ready}><img src={redPill} alt="Red Pill"/></button>
-                    <button onClick={notReady}><img src={bluePill} alt="Blue Pill"/></button>
+                    <Stack spacing={15} direction="row">
+                        <Button className="pill-buttons" variant="contained" sx={{color: "white", backgroundColor: 'red', borderColor: 'black' }} onClick={ready}>Red Pill</Button>
+                        <Button className="pill-buttons" variant="contained" sx={{ color: 'white', backgroundColor: 'blue', borderColor: 'black' }} onClick={notReady}>Blue Pill</Button>
+                    </Stack>
+                    <Snackbar
+                        open={open}
+                        autoHideDuration={6000}
+                        message="Note archived"
+                    />
                 </div>
-            </div> 
+            </div>
         </div>
     );
 }
