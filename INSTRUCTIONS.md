@@ -74,7 +74,7 @@ The parts:
 
 ![display feedback](wireframes/admin.png)
 
-- Add the ability to flag an existing feedback entry for further review on the /admin view.
+[x] Add the ability to flag an existing feedback entry for further review on the /admin view.
 
 ### DEPLOY
 Deploy your project to Heroku. You'll need to read the special instructions for building and deploying with React. 

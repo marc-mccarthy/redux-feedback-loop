@@ -14,7 +14,7 @@ router.post('/', (req, res) => {
 })
 
 router.get('/', (req, res) => {
-    let queryString = `SELECT * FROM feedback ORDER BY id ASC`;
+    let queryString = `SELECT * FROM feedback ORDER BY id DESC`;
     pool.query(queryString).then(result => {
         res.send(result.rows);
     }).catch(error => {
