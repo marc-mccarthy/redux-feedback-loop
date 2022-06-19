@@ -30,6 +30,7 @@ function Admin() {
                         <th>Understanding</th>
                         <th>Supported</th>
                         <th>Comments</th>
+                        <th>Remove</th>
                     </tr>
                 </thead>
                 <tbody>
