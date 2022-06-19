@@ -50,7 +50,7 @@ function Understanding() {
                 <h1 className='Understanding-title'>Understanding</h1>
             </header>
             <h2>How well are you understanding the content?</h2>
-            <Stack spacing={2} direction="row" justifyContent="center">
+            <Stack spacing={2} sx={{m: 10}} direction="row" justifyContent="center">
                 <input onChange={change} value={feelNum} type="number" placeholder="i.e. #1-5"/>
                 <Button variant="contained" color="secondary" onClick={check}>Next</Button>
             </Stack>

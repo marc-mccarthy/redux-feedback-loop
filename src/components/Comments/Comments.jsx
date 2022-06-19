@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './Comments.css';
 import {useDispatch} from 'react-redux';
-import {Button, Stack} from '@mui/material';
+import {Button, Stack, TextareaAutosize} from '@mui/material';
 import {useHistory} from 'react-router-dom';
 
 function Comments() {
@@ -27,10 +27,10 @@ function Comments() {
             </header>
             <div>
                 <h2>Any comments you want to leave?</h2>
-                <Stack spacing={2} direction="row" justifyContent="center">
-                    <input onChange={change} value={feelCom} type="text" placeholder="i.e. This is so fun"/>
-                    <Button variant="contained" color="secondary" onClick={submit}>Next</Button>
+                <Stack spacing={2} sx={{m: 5}} direction="row" justifyContent="center">
+                    <TextareaAutosize aria-label="minimum height" onChange={change} value={feelCom} minRows={6} placeholder="i.e. This is so fun" style={{width: 350}}/>
                 </Stack>
+                <Button variant="contained" color="secondary" onClick={submit}>Next</Button>
             </div>
         </div>
     );

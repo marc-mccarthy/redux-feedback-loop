@@ -21,7 +21,7 @@ function Success() {
             </header>
             <div>
                 <h2>Would you like to provide another round of feedback?</h2>
-                <Button variant="contained" color="secondary" onClick={startOver}>Next</Button>
+                <Button variant="contained" color="secondary" sx={{m: 10}} onClick={startOver}>Next</Button>
             </div>
         </div>
     );

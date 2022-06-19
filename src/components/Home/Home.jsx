@@ -55,7 +55,7 @@ function Home() {
             </header>
             <div>
                 <h2>Shall we get started?</h2>
-                <Stack spacing={20} direction="row" justifyContent="center">
+                <Stack spacing={20} sx={{m: 10}} direction="row" justifyContent="center">
                     <Button className="pill-buttons" variant="contained" sx={{color: "white", backgroundColor: 'red', borderColor: 'black'}} onClick={ready}>Red Pill</Button>
                     <Button className="pill-buttons" variant="contained" sx={{ color: 'white', backgroundColor: 'blue', borderColor: 'black'}} onClick={notReady}>Blue Pill</Button>
                 </Stack>
