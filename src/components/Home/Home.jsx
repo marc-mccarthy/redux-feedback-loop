@@ -1,18 +1,18 @@
-// import React from 'react';
-import * as React from 'react';
-import {useState} from 'react';
+import React, {useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import './Home.css';
 import Swal from 'sweetalert2';
-import {Stack, Snackbar} from '@mui/material';
-import {Button} from '@mui/material';
-
+import {Stack, Button} from '@mui/material';
+import SnackBar from '../SnackBar/SnackBar';
 
 function Home() {
-    const history = useHistory();
+
     const [open, setOpen] = useState(false);
+    
+    const history = useHistory();
 
     const ready = () => {
+        setOpen(true);
         Swal.fire({
             title: 'Warning',
             icon: 'warning',
@@ -24,7 +24,6 @@ function Home() {
             if (result.isDenied) {
                 return false;
             } else if (result.isConfirmed) {
-                setOpen(true);
                 history.push('/feelings');
             }
         }).catch(error => {
@@ -33,6 +32,7 @@ function Home() {
     }
 
     const notReady = () => {
+        setOpen(true);
         Swal.fire({
             title: 'Not Ready',
             text: 'You may go back to sleep.',
@@ -53,17 +53,11 @@ function Home() {
             </header>
             <div>
                 <h2>Shall we get started?</h2>
-                <div className='flex-container'>
-                    <Stack spacing={15} direction="row">
-                        <Button className="pill-buttons" variant="contained" sx={{color: "white", backgroundColor: 'red', borderColor: 'black' }} onClick={ready}>Red Pill</Button>
-                        <Button className="pill-buttons" variant="contained" sx={{ color: 'white', backgroundColor: 'blue', borderColor: 'black' }} onClick={notReady}>Blue Pill</Button>
-                    </Stack>
-                    <Snackbar
-                        open={open}
-                        autoHideDuration={6000}
-                        message="Note archived"
-                    />
-                </div>
+                <Stack spacing={20} direction="row" justifyContent="center">
+                    <Button className="pill-buttons" variant="contained" sx={{color: "white", backgroundColor: 'red', borderColor: 'black'}} onClick={ready}>Red Pill</Button>
+                    <Button className="pill-buttons" variant="contained" sx={{ color: 'white', backgroundColor: 'blue', borderColor: 'black'}} onClick={notReady}>Blue Pill</Button>
+                </Stack>
+                <SnackBar open={open} setOpen={setOpen}/>
             </div>
         </div>
     );

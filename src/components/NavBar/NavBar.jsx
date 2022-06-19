@@ -5,18 +5,16 @@ import {Stack, Link} from '@mui/material';
 function NavBar() {
 
     return (
-        <div className='NavBar'>
-            <nav className='NavBar-title'>
-                <Stack spacing={5} direction="row">
-                    <Link href="/#/" exact sx={{color: "yellow"}} underline="hover">Home</Link>
-                    <Link href="/#/feelings" sx={{color: "yellow"}} underline="hover">Feelings</Link>
-                    <Link href="/#/understanding" sx={{color: "yellow"}} underline="hover">Understanding</Link>
-                    <Link href="/#/supported" sx={{color: "yellow"}} underline="hover">Supported</Link>
-                    <Link href="/#/comments" sx={{color: "yellow"}} underline="hover">Comments</Link>
-                    <Link href="/#/review" sx={{color: "yellow"}} underline="hover">Review</Link>
-                </Stack>
-            </nav>
-        </div>
+        <nav className='NavBar'>
+            <Stack spacing={5} direction="row" justify-content="center">
+                <Link href="/#/" exact sx={{color: "orange"}} underline="hover">Home</Link>
+                <Link href="/#/feelings" sx={{color: "orange"}} underline="hover">Feelings</Link>
+                <Link href="/#/understanding" sx={{color: "orange"}} underline="hover">Understanding</Link>
+                <Link href="/#/supported" sx={{color: "orange"}} underline="hover">Supported</Link>
+                <Link href="/#/comments" sx={{color: "orange"}} underline="hover">Comments</Link>
+                <Link href="/#/review" sx={{color: "orange"}} underline="hover">Review</Link>
+            </Stack>
+        </nav>
     );
 }
 
