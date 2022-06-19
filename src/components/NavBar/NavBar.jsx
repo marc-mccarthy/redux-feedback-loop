@@ -7,7 +7,7 @@ function NavBar() {
     return (
         <nav className='NavBar'>
             <Stack spacing={5} direction="row" justify-content="center">
-                <Link href="/#/admin" sx={{color: "red"}} underline="hover">Admin</Link>
+                <Link href="/#/admin" sx={{color: "lightgrey"}} underline="hover">Admin</Link>
                 <Link href="/#/" exact sx={{color: "orange"}} underline="hover">Home</Link>
                 <Link href="/#/feelings" sx={{color: "orange"}} underline="hover">Feelings</Link>
                 <Link href="/#/understanding" sx={{color: "orange"}} underline="hover">Understanding</Link>
