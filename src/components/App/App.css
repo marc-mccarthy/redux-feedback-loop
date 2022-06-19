@@ -19,3 +19,8 @@
 input {
     font-size: large;
 }
+
+h1 { 
+    grid-column-start: 2;
+}
+
