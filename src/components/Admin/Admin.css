@@ -1,0 +1,38 @@
+.Admin {
+    text-align: center;
+    color: white;
+}
+
+.Admin-header {
+    min-height: 50px;
+}
+
+.Admin-title {
+    font-size: 2em;
+}
+
+.Admin-intro {
+    font-size: large;
+}
+
+table {
+    color: black;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+    border: 1px solid black;
+}
+
+th {
+    color: green;
+}
+
+.Admin-body {
+    margin: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}

@@ -1,0 +1,20 @@
+.AdminItem {
+    text-align: center;
+    color: white;
+}
+
+.AdminItem-header {
+    min-height: 50px;
+}
+
+.AdminItem-title {
+    font-size: 2em;
+}
+
+.AdminItem-intro {
+    font-size: large;
+}
+
+h3 {
+    color: lightgreen;
+}
