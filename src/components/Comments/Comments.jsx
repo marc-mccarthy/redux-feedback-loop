@@ -28,7 +28,7 @@ function Comments() {
             <div>
                 <h2>Any comments you want to leave?</h2>
                 <Stack spacing={2} direction="row" justifyContent="center">
-                    <input onChange={change} value={feelCom} type="text" placeholder="Gimme something"/>
+                    <input onChange={change} value={feelCom} type="text" placeholder="i.e. This is so fun"/>
                     <Button variant="contained" color="secondary" onClick={submit}>Next</Button>
                 </Stack>
             </div>
