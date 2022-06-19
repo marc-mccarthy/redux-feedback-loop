@@ -14,23 +14,3 @@
 .Home-intro {
     font-size: large;
 }
-
-h4 {
-    font-style: italic;
-}
-
-img {
-    height: 50px;
-    width: 50px;
-}
-
-.flex-container {
-    display: flex;
-    justify-content: center;
-}
-
-button {
-    border-radius: 15px;
-    margin-left: 10px;
-    margin-right: 10px;
-}

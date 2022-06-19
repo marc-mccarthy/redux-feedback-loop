@@ -1,16 +1,16 @@
-.Supported {
+.SnackBar {
     text-align: center;
     color: white;
 }
 
-.Supported-header {
+.SnackBar-header {
     min-height: 50px;
 }
 
-.Supported-title {
+.SnackBar-title {
     font-size: 2em;
 }
 
-.Supported-intro {
+.SnackBar-intro {
     font-size: large;
 }

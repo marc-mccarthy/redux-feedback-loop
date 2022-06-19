@@ -1,12 +1,10 @@
 .Success {
     text-align: center;
+    color: white;
 }
 
 .Success-header {
-    min-height: 70px;
-    padding: 20px;
-    color: white;
-    margin-bottom: 20px;
+    min-height: 50px;
 }
 
 .Success-title {
@@ -15,8 +13,4 @@
 
 .Success-intro {
     font-size: large;
-}
-
-h4 {
-    font-style: italic;
 }

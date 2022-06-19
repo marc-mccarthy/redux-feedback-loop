@@ -1,12 +1,10 @@
 .Understanding {
     text-align: center;
+    color: white;
 }
 
 .Understanding-header {
-    min-height: 70px;
-    padding: 20px;
-    color: white;
-    margin-bottom: 20px;
+    min-height: 50px;
 }
 
 .Understanding-title {
@@ -15,8 +13,4 @@
 
 .Understanding-intro {
     font-size: large;
-}
-
-h4 {
-    font-style: italic;
 }

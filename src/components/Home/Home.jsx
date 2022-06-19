@@ -1,14 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import './Home.css';
 import Swal from 'sweetalert2';
-import redPill from '../../images/red-pill.ico';
-import bluePill from '../../images/blue-pill.ico';
+import {Stack, Button} from '@mui/material';
+import SnackBar from '../SnackBar/SnackBar';
 
 function Home() {
+
+    const [open, setOpen] = useState(false);
+    
     const history = useHistory();
 
     const ready = () => {
+        setOpen(true);
         Swal.fire({
             title: 'Warning',
             icon: 'warning',
@@ -28,6 +32,7 @@ function Home() {
     }
 
     const notReady = () => {
+        setOpen(true);
         Swal.fire({
             title: 'Not Ready',
             text: 'You may go back to sleep.',
@@ -48,11 +53,12 @@ function Home() {
             </header>
             <div>
                 <h2>Shall we get started?</h2>
-                <div className='flex-container'>
-                    <button onClick={ready}><img src={redPill} alt="Red Pill"/></button>
-                    <button onClick={notReady}><img src={bluePill} alt="Blue Pill"/></button>
-                </div>
-            </div> 
+                <Stack spacing={20} direction="row" justifyContent="center">
+                    <Button className="pill-buttons" variant="contained" sx={{color: "white", backgroundColor: 'red', borderColor: 'black'}} onClick={ready}>Red Pill</Button>
+                    <Button className="pill-buttons" variant="contained" sx={{ color: 'white', backgroundColor: 'blue', borderColor: 'black'}} onClick={notReady}>Blue Pill</Button>
+                </Stack>
+                <SnackBar open={open} setOpen={setOpen}/>
+            </div>
         </div>
     );
 }

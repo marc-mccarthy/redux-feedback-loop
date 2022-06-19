@@ -1,19 +1,20 @@
 import React from 'react';
 import './NavBar.css';
+import {Stack, Link} from '@mui/material';
 
 function NavBar() {
 
     return (
-        <div className='NavBar'>
-            <nav className='NavBar-title'>
-                <a href="/#/">Home</a>
-                <a href="/#/feelings">Feelings</a>
-                <a href="/#/understanding">Understanding</a>
-                <a href="/#/supported">Supported</a>
-                <a href="/#/comments">Comments</a>
-                <a href="/#/review">Review</a>
-            </nav>
-        </div>
+        <nav className='NavBar'>
+            <Stack spacing={5} direction="row" justify-content="center">
+                <Link href="/#/" exact sx={{color: "orange"}} underline="hover">Home</Link>
+                <Link href="/#/feelings" sx={{color: "orange"}} underline="hover">Feelings</Link>
+                <Link href="/#/understanding" sx={{color: "orange"}} underline="hover">Understanding</Link>
+                <Link href="/#/supported" sx={{color: "orange"}} underline="hover">Supported</Link>
+                <Link href="/#/comments" sx={{color: "orange"}} underline="hover">Comments</Link>
+                <Link href="/#/review" sx={{color: "orange"}} underline="hover">Review</Link>
+            </Stack>
+        </nav>
     );
 }
 

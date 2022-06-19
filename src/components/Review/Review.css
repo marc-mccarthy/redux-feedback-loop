@@ -1,12 +1,10 @@
 .Review {
     text-align: center;
+    color: white;
 }
 
 .Review-header {
-    min-height: 70px;
-    padding: 20px;
-    color: white;
-    margin-bottom: 20px;
+    min-height: 50px;
 }
 
 .Review-title {
@@ -17,6 +15,6 @@
     font-size: large;
 }
 
-h4 {
-    font-style: italic;
+h3 {
+    color: lightgreen;
 }
