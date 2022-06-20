@@ -78,6 +78,9 @@ function Review() {
                 <h1 className='Review-title'>Review</h1>
             </header>
             <h2>Review Your Feedback</h2>
+            <div id="gridContainer">
+                
+            </div>
             <div>
                 <h3>Feelings: {feelings}</h3>
                 <h3>Understanding: {understanding}</h3>
@@ -85,7 +88,7 @@ function Review() {
                 <h3>Comments: {comments}</h3>
             </div>
             <div>
-            <Button variant="contained" color="secondary" onClick={check}>Next</Button>
+                <Button variant="contained" color="secondary" onClick={check}>Next</Button>
             </div>
             <SnackBar open={open} setOpen={setOpen}/>
         </div>
