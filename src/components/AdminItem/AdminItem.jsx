@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import './AdminItem.css';
@@ -6,6 +6,7 @@ import {Button} from '@mui/material';
 import FlagIcon from '@mui/icons-material/Flag';
 import FlagOutlinedIcon from '@mui/icons-material/FlagOutlined';
 import DeleteIcon from '@mui/icons-material/Delete';
+import { green } from '@mui/material/colors';
 
 function AdminItem(props) {
 
@@ -50,7 +51,7 @@ function AdminItem(props) {
         <tr>
             <td>
                 <Button onClick={switchFlag}>
-                    {props.instance.flagged ? <FlagIcon/> : <FlagOutlinedIcon/>}
+                    {props.instance.flagged ? <FlagIcon sx={{color: "green"}}/> : <FlagOutlinedIcon sx={{color: "green"}}/>}
                 </Button>
             </td>
             <td>{props.instance.feeling}</td>
@@ -59,7 +60,7 @@ function AdminItem(props) {
             <td>{props.instance.comments}</td>
             <td>
                 <Button onClick={checkDelete}>
-                    <DeleteIcon/>
+                    <DeleteIcon sx={{color: "green"}}/>
                 </Button>
             </td>
         </tr>
