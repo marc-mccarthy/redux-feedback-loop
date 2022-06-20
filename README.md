@@ -1,9 +1,25 @@
-# Project Name
+# React Feedback Loop
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+## Heroku Link
+
+[Redux Feedback Loop](https://redux-feedback-loop-1.herokuapp.com/#/)
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+This is a feedback management application following similar guidelines to Prime Academy. You follow the prompts with your daily feedback and can do this as many times as you'd like. There is an admin page where you can manage the previous feedback stored in the database.
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+## Interface
+
+![wireframe](./wireframes/demonstration.gif)
+
+## Languages
+
+JavaScript, CSS, HTML, Postgresql, and Markdown demonstrated.
+
+## Packages
+
+This is built using React, Redux, Material UI, Node.js with Express, Pg, Nodemon, Axios, SweetAlert2, and DotEnv utilized.
+
+## Future Updates
+
+Future updates are unknown at this time.
