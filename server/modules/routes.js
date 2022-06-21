@@ -1,9 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const pool = require('./pool');
+require('dotenv').config();
 
 router.post('/', (req, res) => {
-    let queryString = `INSERT INTO feedback (feeling, understanding, support, comments) VALUES ($1, $2, $3, $4)`;
+    console.log(req.body)
+    let queryString = `INSERT INTO "feedback" ("feeling", "understanding", "support", "comments") VALUES ($1, $2, $3, $4)`;
     let values = [req.body.feelings, req.body.understanding, req.body.supported, req.body.comments];
     pool.query(queryString, values).then(result => {
         res.sendStatus(200);

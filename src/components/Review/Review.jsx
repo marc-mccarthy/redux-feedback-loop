@@ -59,7 +59,7 @@ function Review() {
     }
 
     const submit = () => {
-        axios.post('/', {
+        axios.post('/feedback', {
             feelings: feelings,
             understanding: understanding,
             supported: supported,
@@ -68,7 +68,6 @@ function Review() {
             console.log(response);
         }).catch(error => {
             console.log(error);
-            alert(`Error Found: ${error}`);
         })
     }
 
