@@ -59,7 +59,7 @@ function Review() {
     }
 
     const submit = () => {
-        axios.post('/feedback', {
+        axios.post('/', {
             feelings: feelings,
             understanding: understanding,
             supported: supported,
