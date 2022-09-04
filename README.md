@@ -10,7 +10,7 @@ This is a feedback management application following similar guidelines to Prime 
 
 ## Interface
 
-![wireframe](./wireframes/demonstration.gif)
+![wireframe](./wireframes/wireframe.gif)
 
 ## Languages
 
